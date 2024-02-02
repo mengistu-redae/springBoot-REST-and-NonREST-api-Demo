@@ -1,0 +1,45 @@
+
+
+/*
+* DAO is a design pattern which is used to separate data accessing operations
+* (API) (layer) from business logic. The following are the participants in Data
+* Access Object Pattern:- 
+* - Data Access Object Interface: This interface defines the standard operations 
+*   to be performed on a model object(s). 
+* - Data Access Object concrete class: This class implements the above interface. This
+*   class is responsible to get data from a data source which can be a database,
+*   XML, or any other storage mechanism. 
+* - Model Object or Value Object: This object is a simple POJO containing 
+*   the get/set methods to store data retrieved using DAO class.
+*/
+
+
+/*
+ * There are attributes of the mapping annotation that can be used for different purposes:
+ * 	~ value or path
+ * 	~ consumes
+ * 	~ headers
+ * 	~ headers
+ * 	~ params
+ * 	~ produces
+ *  
+ * To restrict or list down the types of outputs this method produces, we use "produces"
+ * attribute which accepts array of string values. The default is JSON. But, if we want 
+ * other types too example "XML", we need to deploy jackosn-xml and then can be used.
+ * 
+ * Eg. the below "getCustomers()" method only supports xml and json as output. So, clients
+ * that request the output to be in other format will get "Error 404".
+ * 
+ */
+ 
+ 
+ /*
+ * To restrict or list down the types of data this method consumes (takes as input from client), 
+ * we use "consumes" attribute which accepts array of string values. The default is JSON. 
+ * But, if we want other types too example "XML", we need to deploy jackosn-xml and then can be used.
+ * 
+ * Eg. the below "createCustomer(@RequestBody Customer customer)" method only supports xml and json 
+ * as input i.e accepts xml or json formatted data from client. So, clients that send data 
+ * in other format will get "Error 404".
+ * 
+ */

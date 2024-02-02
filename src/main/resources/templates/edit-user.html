@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit User</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+    
+    <style>
+        .custom-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    
+</head>
+<body>
+
+<div class="container custom-container">
+	<div class="col-md-6 jumbotron"> <!-- Adjust the column width and offset -->			
+	    <h2 class="text-center">Edit User</h2>
+	    <form th:object="${user}" th:action="@{/edit/{id}(id=${user.id})}" method="post">
+	        <input type="hidden" th:field="*{id}"/>
+	        <div class="form-group">
+	            <label for="firstName">First Name:</label>
+	            <input type="text" class="form-control" id="firstName" th:field="*{firstName}"/>
+	        </div>
+	        <div class="form-group">
+	            <label for="lastName">Last Name:</label>
+	            <input type="text" class="form-control" id="lastName" th:field="*{lastName}"/>
+	        </div>
+	        <div class="form-group">
+	            <label for="age">Age:</label>
+	            <input type="text" class="form-control" id="age" th:field="*{age}"/>
+	        </div>
+	        <div class="form-group">
+	            <label for="occupation">Occupation:</label>
+	            <input type="text" class="form-control" id="occupation" th:field="*{occupation}"/>
+	        </div>
+	        <!-- Update button -->
+	        <button type="submit" class="btn btn-primary">Update</button>
+	        <!-- Reset button -->
+	        <button type="button" class="btn btn-secondary" onclick="resetForm()">Reset</button>
+	    </form>
+	</div>
+</div>
+
+<!-- JavaScript to reset form fields -->
+<script>
+    // Set JavaScript variables with original user details
+    /*
+        [[${user.firstName}]], [[${user.lastName}]], 
+        [[${user.age}]], and [[${user.occupation}]] are Thymeleaf expressions that 
+        output the original user details passed from the controller.
+        
+        Note:
+        	In JavaScript, when assigning string literals to variables, the string literals need to be 
+        	enclosed within quotes (' or "). So, the Thymeleaf expressions should be assigned to 
+        	JavaScript variables by enclosing within quotes. 
+    */
+    var originalFirstName = "[[${user.firstName}]]";
+    var originalLastName = "[[${user.lastName}]]";
+    var originalAge = "[[${user.age}]]"; 
+    var originalOccupation = "[[${user.occupation}]]";
+    
+    function resetForm() {
+        // Set form fields with original values
+        document.getElementById("firstName").value = originalFirstName;
+        document.getElementById("lastName").value = originalLastName;
+        document.getElementById("age").value = originalAge;
+        document.getElementById("occupation").value = originalOccupation;
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-4B7xAf2rDolEt9L4KIWyN0IoDjLMPqC6DHQM1fjLerxuP7vmfX6/aSXay1TW3Cwv"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shCk/8E+GEIfjLegxhjVME1kCKaTG7K9ixnKp"
+        crossorigin="anonymous"></script>
+</body>
+</html>

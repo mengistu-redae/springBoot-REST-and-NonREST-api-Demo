@@ -1,0 +1,45 @@
+
+
+crud REST API with postman and UI browser clients
+- crud REST API using post-man as a client and 
+- crud operations using browser UI as a client
+- MySql as back-end data source is used
+
+----------------------------
+Sample JSON data on customer table is:
+----------------------------
+
+[
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "age": 30,
+    "occupation": "Software Engineer"
+  },
+  {
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "age": 25,
+    "occupation": "Data Scientist"
+  },
+  {
+    "id": 3,
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "age": 35,
+    "occupation": "Marketing Manager"
+  },
+  {
+    "firstName": "Bob",
+    "lastName": "Brown",
+    "age": 40,
+    "occupation": "Project Manager"
+  },
+  {
+    "firstName": "Emily",
+    "lastName": "Davis",
+    "age": 28,
+    "occupation": "Graphic Designer"
+  }
+]
+
