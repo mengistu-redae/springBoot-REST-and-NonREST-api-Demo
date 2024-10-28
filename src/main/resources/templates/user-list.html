@@ -7,11 +7,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">    
 </head>
 <body>
-    <div class="container col-md-8 jumbotron mt-4">		    
+    <div class="container col-md-8 jumbotron mt-4">	
+		<div class="row">
+			<div class="col text-right">
+		    	<a th:href="@{/add}" class="btn btn-success btn-sm">Add User</a>
+	    </div>
+		</div>	
         <div class="row">
             <div class="col text-center">
 				<h1 class="align-middle d-inline-block mr-2">User List</h1>
-                <small class="text-muted align-middle"><span th:text="'( ' + ${users.size()} + ' users retrived )'"></span></small>                
+				<small class="text-muted align-middle" style="color: #008080 !important; font-weight: bold;">
+				    <span th:text="'( ' + ${users.size()} + ' users retrieved )'"></span>
+				</small>                
             </div>
         </div>
 	    <div class="row">

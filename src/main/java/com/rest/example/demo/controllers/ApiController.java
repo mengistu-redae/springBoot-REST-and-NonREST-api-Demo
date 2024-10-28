@@ -20,7 +20,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 controller to handle requests from browser client (GUI client)
 */
 @Controller
-@Tag(name = "User Operations using web UI", description = "Endpoints for user operationsusing web UI")
+@Tag(name = "User Operations using web UI", description = "Endpoints for user operations using web UI")
 public class ApiController {
 
     @Autowired

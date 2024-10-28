@@ -1,0 +1,48 @@
+
+
+crud REST API with postman and MySql connection
+- crud REST API using post-man as a client and 
+- MySql connection console application successfully completed
+
+----------------------------
+Sample JSON data on customer table is:
+----------------------------
+
+[
+    {
+        "id": 2,
+        "name": "MC Hammer",
+        "email": "hammer@mailinator.com",
+        "phone": "833-045-6368",
+        "address": "Ruskacvotak 11",
+        "city_region": "PG",
+        "cc_number": "378168419808042"
+    },
+    {
+        "id": 3,
+        "name": "Karel Gott",
+        "email": "gott@mailinator.com",
+        "phone": "855-837-2290",
+        "address": "83/12/45 Kosteln",
+        "city_region": "PG",
+        "cc_number": "370126117019757"
+    },
+    {
+        "id": 4,
+        "name": "Helena Vondrackova",
+        "email": "h.vondrackova@mailinator.cz",
+        "phone": "899-102-1174",
+        "address": "18 Letohradskaovack",
+        "city_region": "PG",
+        "cc_number": "371248067514600"
+    },
+    {
+        "id": 5,
+        "name": "Charlie Pace",
+        "email": "c.pace@mailinator.com",
+        "phone": "844-134-3777",
+        "address": "45 Autofcase Ouvonstaut",
+        "city_region": "PG",
+        "cc_number": "342392325479721"
+    }
+]
